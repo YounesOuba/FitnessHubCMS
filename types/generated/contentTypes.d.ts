@@ -422,7 +422,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     categories: Schema.Attribute.String;
-    content: Schema.Attribute.Blocks;
+    content: Schema.Attribute.RichText;
     coverImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -439,6 +439,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String;
     slug: Schema.Attribute.UID;
+    smParagraph: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
